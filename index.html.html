@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aurum Fine Dining</title>
+
+  <meta
+  name="description"
+  content="Aurum luxury fine dining restaurant offering premium culinary experiences.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+    body{
+      background:#111;
+      color:white;
+      font-family:Arial, sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    .navbar{
+      background:#000;
+      padding:15px 0;
+    }
+
+    .navbar-brand{
+      font-size:1.8rem;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    .nav-link{
+      color:white !important;
+      margin-left:15px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      color:gold !important;
+      font-weight:bold;
+    }
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:5rem;
+      font-weight:bold;
+    }
+
+    .hero p{
+      font-size:1.3rem;
+      margin-bottom:25px;
+    }
+
+    .btn-gold{
+      background:goldenrod;
+      border:none;
+      color:black;
+      padding:12px 28px;
+      font-weight:bold;
+      border-radius:6px;
+    }
+
+    .btn-gold:hover{
+      background:gold;
+    }
+
+    .section{
+      padding:90px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:2.8rem;
+      font-weight:bold;
+    }
+
+    .about-img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    .menu-card{
+      background:#1c1c1c;
+      border:none;
+      border-radius:12px;
+      overflow:hidden;
+      transition:0.3s;
+      height:100%;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .menu-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .menu-content{
+      padding:20px;
+    }
+
+    .price{
+      color:gold;
+      font-size:1.2rem;
+      font-weight:bold;
+    }
+
+    .gallery-img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .gallery-img:hover{
+      transform:scale(1.03);
+    }
+
+    .form-control{
+      padding:12px;
+      margin-bottom:20px;
+    }
+
+    footer{
+      background:black;
+      text-align:center;
+      padding:30px;
+      margin-top:40px;
+    }
+
+    .btn:focus,
+    .nav-link:focus,
+    .form-control:focus{
+      outline:2px solid gold;
+      box-shadow:none;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:3rem;
+      }
+
+      .section-title{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="#">AURUM</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNav">
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+  <div>
+
+    <h1>AURUM</h1>
+
+    <p>
+      Luxury Fine Dining & Signature Culinary Experiences
+    </p>
+
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+
+      <a href="#contact" class="btn btn-gold">
+        Reserve Table
+      </a>
+
+      <a href="#menu" class="btn btn-outline-light">
+        View Menu
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about" class="section">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <img
+        src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1000&q=80"
+        class="about-img"
+        alt="Luxury restaurant dining">
+      </div>
+
+      <div class="col-lg-6">
+
+        <h2 class="mb-4">About Aurum</h2>
+
+        <p class="lead">
+          Aurum is a luxury fine dining restaurant inspired by modern French cuisine,
+          seasonal ingredients, and unforgettable culinary artistry.
+        </p>
+
+        <p>
+          Our chefs combine premium ingredients with elegant presentation to create
+          a dining experience that blends sophistication, comfort, and innovation.
+        </p>
+
+        <p>
+          From handcrafted appetizers to signature desserts, every dish is designed
+          to delight the senses.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="menu" class="section bg-dark">
+
+  <div class="container">
+
+    <h2 class="section-title">Signature Menu</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=700&q=80"
+          alt="Oyster dish">
+
+          <div class="menu-content">
+            <h4>Oyster & Champagne</h4>
+            <p>Fresh oyster with champagne mignonette and herbs.</p>
+            <div class="price">₹3,600</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=700&q=80"
+          alt="Wagyu steak">
+
+          <div class="menu-content">
+            <h4>Wagyu Tenderloin</h4>
+            <p>A5 Japanese Wagyu served with truffle sauce.</p>
+            <div class="price">₹9,000</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=700&q=80"
+          alt="Scallop soup">
+
+          <div class="menu-content">
+            <h4>Scallop Bisque</h4>
+            <p>Pan-seared scallops with saffron lobster bisque.</p>
+            <div class="price">₹5,300</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=700&q=80"
+          alt="Duck confit">
+
+          <div class="menu-content">
+            <h4>Duck Confit</h4>
+            <p>Slow-cooked duck with cherry gastrique sauce.</p>
+            <div class="price">₹4,900</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700&q=80"
+          alt="Chocolate dessert">
+
+          <div class="menu-content">
+            <h4>Chocolate Fondant</h4>
+            <p>Warm chocolate fondant with vanilla ice cream.</p>
+            <div class="price">₹2,100</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80"
+          alt="Garden tasting dish">
+
+          <div class="menu-content">
+            <h4>Garden Tasting</h4>
+            <p>Seasonal plant-based tasting experience.</p>
+            <div class="price">₹8,000</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80"
+          alt="Grilled salmon">
+
+          <div class="menu-content">
+            <h4>Grilled Salmon</h4>
+            <p>Atlantic salmon with lemon butter glaze.</p>
+            <div class="price">₹4,500</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="menu-card">
+
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80"
+          alt="Creamy pasta">
+
+          <div class="menu-content">
+            <h4>Royal Pasta</h4>
+            <p>Creamy truffle pasta with parmesan flakes.</p>
+            <div class="price">₹4,200</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section id="gallery" class="section">
+
+  <div class="container">
+
+    <h2 class="section-title">Gallery</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <img class="gallery-img"
+        src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=900&q=80"
+        data-bs-toggle="modal"
+        data-bs-target="#galleryModal"
+        alt="Restaurant interior">
+      </div>
+
+      <div class="col-md-4">
+        <img class="gallery-img"
+        src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80"
+        alt="Luxury dining table">
+      </div>
+
+      <div class="col-md-4">
+        <img class="gallery-img"
+        src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=900&q=80"
+        alt="Fine dining food">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section bg-dark" id="testimonials">
+
+  <div class="container">
+
+    <h2 class="section-title">Testimonials</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner text-center">
+
+        <div class="carousel-item active">
+          <h4>“An unforgettable luxury dining experience.”</h4>
+          <p>- Emma Wilson</p>
+        </div>
+
+        <div class="carousel-item">
+          <h4>“The Wagyu was absolutely perfect.”</h4>
+          <p>- Daniel Smith</p>
+        </div>
+
+        <div class="carousel-item">
+          <h4>“Elegant atmosphere and exceptional service.”</h4>
+          <p>- Olivia Brown</p>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact" class="section bg-dark">
+
+  <div class="container">
+
+    <h2 class="section-title">Contact & Reservations</h2>
+
+    <div class="row g-5">
+
+      <div class="col-lg-5">
+
+        <h4>Visit Us</h4>
+
+        <p>14 Albemarle Street, London</p>
+        <p>Email: reservations@aurum.com</p>
+        <p>Phone: +44 207 123 4567</p>
+
+        <p>
+          Open Tuesday to Sunday<br>
+          12 PM - 11 PM
+        </p>
+
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.701420627747!2d-0.142507!3d51.511156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052d1f7c1235%3A0x7e3d5f8c2a4f1b4!2sMayfair%2C%20London!5e0!3m2!1sen!2sin!4v1716460000000!5m2!1sen!2sin"
+        width="100%"
+        height="250"
+        style="border:0; border-radius:10px;"
+        allowfullscreen=""
+        loading="lazy">
+        </iframe>
+
+      </div>
+
+      <div class="col-lg-7">
+
+        <form id="bookingForm">
+
+          <input type="text" class="form-control" placeholder="Your Name" required>
+
+          <input type="email" class="form-control" placeholder="Email Address" required>
+
+          <input type="text" class="form-control" placeholder="Phone Number" required>
+
+          <textarea rows="5" class="form-control" placeholder="Reservation Details"></textarea>
+
+          <button class="btn btn-gold">
+            Book Table
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <h4>AURUM</h4>
+
+  <p>
+    Luxury Fine Dining Experience
+  </p>
+
+  <p>
+    © 2026 Aurum Restaurant
+  </p>
+
+  <div class="mt-3">
+
+    <a href="#" class="text-white me-3">Instagram</a>
+
+    <a href="#" class="text-white me-3">Facebook</a>
+
+    <a href="#" class="text-white">Twitter</a>
+
+  </div>
+
+</footer>
+
+<div class="modal fade" id="galleryModal" tabindex="-1">
+
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+
+    <div class="modal-content bg-dark border-0">
+
+      <img
+      src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1200&q=80"
+      class="img-fluid"
+      alt="Restaurant gallery image">
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop;
+
+    if(pageYOffset >= sectionTop - 200){
+      current = section.getAttribute("id");
+    }
+
+  });
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    if(link.getAttribute("href") === `#${current}`){
+      link.classList.add("active");
+    }
+
+  });
+
+});
+
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const name = form.querySelector("input[type='text']").value.trim();
+
+  const email = form.querySelector("input[type='email']").value.trim();
+
+  if(name.length < 3){
+    alert("Name must be at least 3 characters");
+    return;
+  }
+
+  if(!email.includes("@")){
+    alert("Enter valid email");
+    return;
+  }
+
+  alert("Reservation Submitted Successfully");
+
+  form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
